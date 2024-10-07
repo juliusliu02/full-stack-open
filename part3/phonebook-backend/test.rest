@@ -1,0 +1,47 @@
+@id1 = 4
+GET http://localhost:3001/api/persons/{{id1}}
+###
+@id2 = 5
+GET http://localhost:3001/api/persons/{{id2}}
+###
+@id3 = 6702a14f335cd579b3b4ee54
+DELETE http://localhost:3001/api/persons/{{id3}}
+###
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "Tina J.",
+  "number": "123-456-789"
+}
+###
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "Tina J.",
+  "number": "123-456"
+}
+###
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "Tina J.",
+  "number": "123-456-000"
+}
+
+###
+GET localhost:3001/api/persons
+
+###
+POST localhost:3001/api/persons/6702adfd1cf9a3b3cc01e684
+Content-Type: application/json
+
+{
+  "name": "Tina J.",
+  "number": "123-456-999"
+}
+
+###
+GET localhost:3001/info

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../full-stack-open/part2/phonebook/.idea/phonebook.iml" filepath="$PROJECT_DIR$/../full-stack-open/part2/phonebook/.idea/phonebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/phonebook-backend.iml" filepath="$PROJECT_DIR$/.idea/phonebook-backend.iml" />
+    </modules>
+  </component>
+</project>

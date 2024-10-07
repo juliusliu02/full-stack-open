@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect, Fragment} from 'react'
 import personsServices from './services/persons.js'
 
 const Filter = ({ handleChange }) => {
@@ -13,10 +13,10 @@ const Phonebook = ({persons, handleDelete}) => {
     return (
         <>
             {persons.map((person) => {
-                return <>
-                    <p key={person.id}>{person.name} {person.number}</p>
-                    <button key={'d'+person.id} onClick={() => handleDelete(person)}>delete</button>
-                </>
+                return <Fragment key={person.id}>
+                    <p key={'text' + person.id}>{person.name} {person.number}</p>
+                    <button key={'delete' + person.id} onClick={() => handleDelete(person)}>delete</button>
+                </Fragment>
             })}
         </>
     )
@@ -79,23 +79,28 @@ const App = () => {
         const prevPerson = findName(newName)
 
         if (prevPerson !== undefined) {
-            window.confirm(newName + ' is already added to phonebook. Replace the old number with the new one?')
+            if(!window.confirm(newName + ' is already added to phonebook. Replace the old number with the new one?')) {
+                return
+            }
+
             personsServices.update(prevPerson.id, newPerson)
-                .catch(error => {
-                    setMessage({type: 'error', body: `${newName}'s information has already been removed from server.`})
+                .then(result => {
+                    setPersons(persons.map(person => (person.name === newName ? result : person)))
+                    setMessage({type: 'success', body: `${newName} updated successfully.`})
                 })
-            setPersons(persons.map(person => (person.name === newName ? newPerson : person)))
-            setMessage({type: 'success', body: `${newName} updated successfully.`})
+                .catch(error => {
+                    setMessage({type: 'error', body: error.response.data.error})
+                })
+
             return
         }
 
         personsServices.create(newPerson)
             .then(res => {
-                newPerson.id = res.id
-                setPersons(persons.concat(newPerson))
+                setPersons(persons.concat(res))
                 setMessage({type: 'success', body: `${newName} added successfully.`})
             }).catch(error => {
-                setMessage({type: 'error', body: error.message})
+                setMessage({type: 'error', body: error.response.data.error})
         })
     }
 
@@ -108,10 +113,11 @@ const App = () => {
     }
 
     const handleDelete = (person) => {
-        window.confirm('Are you sure you want to delete ' + person.name + '?')
+        if(!window.confirm('Are you sure you want to delete ' + person.name + '?')) {
+            return
+        }
         personsServices.deletePerson(person.id)
             .then(res => {
-                console.log(res)
                 const newPersons = persons.filter(p => p.id !== person.id)
                 setPersons(newPersons)
                 setMessage({type: 'success', body: `${person.name} deleted successfully.`})
