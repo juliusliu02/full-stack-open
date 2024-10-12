@@ -1,0 +1,36 @@
+### GET request to get blogs
+GET localhost:3001/api/blogs
+
+### POST request to create a blog
+POST localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2NzA5OGU4NzVmNDk4N2I1ZTJjNDllYTQiLCJpYXQiOjE3Mjg2OTMwODV9.dN7Papria76iTluNCwaq_0wCqQ-fen0PdMwe3Bd3Zwo
+
+{
+  "title": "Test 1",
+  "author": "Me",
+  "url": "localhost",
+  "likes": 3
+}
+
+### Test Login
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "username": "mluukkaiaa",
+  "name": "Matti Luukkainen",
+  "password": "salainen"
+}
+
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+  "username": "mluukkai",
+  "password": "salainen"
+}
+###
+DELETE http://localhost:3001/api/blogs/6709c40f444cf97e3eea8cb2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2NzA5OGU4NzVmNDk4N2I1ZTJjNDllYTQiLCJpYXQiOjE3Mjg2OTMyOTN9.AE-z8vVNAmX5gLxY0nVXXd6ovf9B9R2vjrBFoo05FzQ
