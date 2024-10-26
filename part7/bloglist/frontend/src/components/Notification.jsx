@@ -1,9 +1,12 @@
-import { useNotificationValue } from "../NotificationContext";
+import NotificationContext from "../NotificationContext";
+import { useContext } from "react";
 
 const Notification = () => {
-  const message = useNotificationValue();
+  const [message, dispatch] = useContext(NotificationContext);
 
-  if (message === null) return null;
+  if (!message) return null;
+
+  setTimeout(() => dispatch({ type: "CLEAR" }), 5000);
 
   const success = {
     color: "green",
@@ -17,11 +20,11 @@ const Notification = () => {
     fontSize: 16,
   };
 
-  if (message.type === "success") {
+  if (message.type === "SUCCESS") {
     return <div style={success}>{message.body}</div>;
   }
 
-  if (message.type === "error") {
+  if (message.type === "ERROR") {
     return <div style={error}>{message.body}</div>;
   }
 };

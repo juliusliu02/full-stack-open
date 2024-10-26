@@ -22,4 +22,15 @@ export const UserContextProvider = ({ children }) => {
     </UserContext.Provider>
   );
 };
+
+export const useUserValue = () => {
+  const context = useContext(UserContext);
+  return context[0];
+};
+
+export const useUserDispatch = () => {
+  const context = useContext(UserContext);
+  return context[1];
+};
+
 export default UserContext;

@@ -1,57 +1,91 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import blogService from "../services/blogs";
+import { useNotificationDispatch } from "../NotificationContext";
 
-const BlogForm = ({ createBlog }) => {
-    const [title, setTitle] = useState('')
-    const [author, setAuthor] = useState('')
-    const [url, setUrl] = useState('')
+const BlogForm = ({ blogFormRef }) => {
+  const queryClient = useQueryClient();
+  const dispatch = useNotificationDispatch();
 
-    const handleCreate = async (event) => {
-        event.preventDefault()
-        createBlog({
-            title, author, url,
-        })
+  const newBlogMutation = useMutation({
+    mutationFn: blogService.create,
+    onSuccess: (newBlog) => {
+      const blogs = queryClient.getQueryData(["blogs"]);
+      queryClient.setQueryData(["blogs"], blogs.concat(newBlog));
+    },
+  });
 
-        setTitle('')
-        setAuthor('')
-        setUrl('')
+  const createBlog = async (blog) => {
+    try {
+      newBlogMutation.mutate(blog);
+      dispatch({
+        type: "SUCCESS",
+        payload: `A new blog ${blog.title} by ${blog.author} added.`,
+      });
+      blogFormRef.current.toggleVisibility();
+    } catch (exception) {
+      dispatch({
+        type: "ERROR",
+        payload: "Creation failed: " + exception.message,
+      });
     }
+  };
 
-    return (
-        <>
-            <h2>create new</h2>
-            <form onSubmit={handleCreate}>
-                <div>
-                    title:
-                    <input
-                        value={title}
-                        name="title"
-                        id='blog-title'
-                        data-testid='title'
-                        onChange={({ target }) => setTitle(target.value)}
-                    />
-                </div>
-                <div>
-                    author:
-                    <input
-                        value={author}
-                        name="author"
-                        data-testid='author'
-                        onChange={({ target }) => setAuthor(target.value)}
-                    />
-                </div>
-                <div>
-                    url:
-                    <input
-                        value={url}
-                        name="url"
-                        data-testid='url'
-                        onChange={({ target }) => setUrl(target.value)}
-                    />
-                </div>
-                <button data-testid='create' type="submit">create</button>
-            </form>
-        </>
-    )
-}
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+  const [url, setUrl] = useState("");
 
-export default BlogForm
+  const handleCreate = async (event) => {
+    event.preventDefault();
+    await createBlog({
+      title,
+      author,
+      url,
+    });
+
+    setTitle("");
+    setAuthor("");
+    setUrl("");
+  };
+
+  return (
+    <>
+      <h2>create new</h2>
+      <form onSubmit={handleCreate}>
+        <div>
+          title:
+          <input
+            value={title}
+            name="title"
+            id="blog-title"
+            data-testid="title"
+            onChange={({ target }) => setTitle(target.value)}
+          />
+        </div>
+        <div>
+          author:
+          <input
+            value={author}
+            name="author"
+            data-testid="author"
+            onChange={({ target }) => setAuthor(target.value)}
+          />
+        </div>
+        <div>
+          url:
+          <input
+            value={url}
+            name="url"
+            data-testid="url"
+            onChange={({ target }) => setUrl(target.value)}
+          />
+        </div>
+        <button data-testid="create" type="submit">
+          create
+        </button>
+      </form>
+    </>
+  );
+};
+
+export default BlogForm;

@@ -2,10 +2,12 @@ import { createContext, useContext, useReducer } from "react";
 
 const notificationReducer = (state, action) => {
   switch (action.type) {
-    case "SET_NOTIFICATION":
-      return action.payload;
-    case "CLEAR_NOTIFICATION":
-      return {};
+    case "SUCCESS":
+      return { type: "SUCCESS", body: action.payload };
+    case "ERROR":
+      return { type: "ERROR", body: action.payload };
+    case "CLEAR":
+      return null;
   }
 };
 
@@ -14,7 +16,7 @@ const NotificationContext = createContext();
 export const NotificationContextProvider = ({ children }) => {
   const [notification, notificationDispatch] = useReducer(
     notificationReducer,
-    "",
+    null,
   );
 
   return (
