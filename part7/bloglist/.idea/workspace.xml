@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cb9c077-0407-4856-95bf-3f5784dac798" name="Changes" comment="" />
+    <list default="true" id="5cb9c077-0407-4856-95bf-3f5784dac798" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../part3/phonebook-backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part3/phonebook-backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/.idea/bloglist.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/.idea/bloglist.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/controllers/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/controllers/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/tests/user.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/tests/user.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/utils/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/utils/middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test.rest" beforeDir="false" afterPath="$PROJECT_DIR$/backend/test.rest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Blog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Notification.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Notification.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Togglable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Togglable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/blogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +38,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="JSX File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2nwgRxIlqloWSZjIh9HsdYEOSfh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,8 +56,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "HTTP Request.test | #6.executor": "Run",
+    "Node.js Test Runner.4.10: POST creates a new post.executor": "Run",
+    "Node.js Test Runner.4.8: blogs are returned as json.executor": "Run",
+    "Node.js Test Runner.when there is initially one user in db.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "redux",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/julius/Documents/Code/Playground/full-stack-open/part7/bloglist",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -48,8 +79,61 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/index.css" />
       <recent name="$PROJECT_DIR$/frontend/src/reducers" />
     </key>
+  </component>
+  <component name="RunManager" selected="HTTP Request.test | #6">
+    <configuration name="test | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/test.rest" index="6" requestIdentifier="#6" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="4.10: POST creates a new post" type="NodeJsTestRunner" temporary="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <language value="JAVA_SCRIPT" />
+      <typescript-loader value="MANUAL_SETUP_IN_NODE_OPTION" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/tests/bloglist_api.test.js" />
+      <test-names>
+        <test-name value="4.10: POST creates a new post" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="4.8: blogs are returned as json" type="NodeJsTestRunner" temporary="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <language value="JAVA_SCRIPT" />
+      <typescript-loader value="MANUAL_SETUP_IN_NODE_OPTION" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/tests/bloglist_api.test.js" />
+      <test-names>
+        <test-name value="4.8: blogs are returned as json" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="when there is initially one user in db" type="NodeJsTestRunner" temporary="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <language value="JAVA_SCRIPT" />
+      <typescript-loader value="MANUAL_SETUP_IN_NODE_OPTION" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/backend/tests/user.test.js" />
+      <test-names>
+        <test-name value="when there is initially one user in db" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.test | #6" />
+        <item itemvalue="Node.js Test Runner.4.8: blogs are returned as json" />
+        <item itemvalue="Node.js Test Runner.when there is initially one user in db" />
+        <item itemvalue="Node.js Test Runner.4.10: POST creates a new post" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -72,5 +156,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

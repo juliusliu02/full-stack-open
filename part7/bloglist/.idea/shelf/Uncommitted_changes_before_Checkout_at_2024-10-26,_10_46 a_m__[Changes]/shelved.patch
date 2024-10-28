@@ -1,0 +1,71 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5cb9c077-0407-4856-95bf-3f5784dac798\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../..\" />\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"associatedIndex\": 5\n}]]></component>\n  <component name=\"ProjectId\" id=\"2nwgRxIlqloWSZjIh9HsdYEOSfh\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"redux\",\n    \"last_opened_file_path\": \"/Users/julius/Documents/Code/Playground/full-stack-open/part7/bloglist\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.standard\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.standard\": \"\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"prettierjs.PrettierConfiguration.Package\": \"/usr/local/lib/node_modules/prettier\",\n    \"settings.editor.selected.configurable\": \"settings.javascript.linters.eslint\",\n    \"ts.external.directory.path\": \"/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/frontend/src/reducers\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5cb9c077-0407-4856-95bf-3f5784dac798\" name=\"Changes\" comment=\"\" />\n      <created>1729889548030</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1729889548030</updated>\n      <workItem from=\"1729889549085\" duration=\"7587000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/.idea/workspace.xml	(date 1729953998782)
+@@ -4,7 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5cb9c077-0407-4856-95bf-3f5784dac798" name="Changes" comment="" />
++    <list default="true" id="5cb9c077-0407-4856-95bf-3f5784dac798" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/../../part3/phonebook-backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part3/phonebook-backend/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/.idea/bloglist.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/.idea/bloglist.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/.idea/modules.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/app.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/controllers/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/controllers/blog.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/package.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/tests/user.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/tests/user.test.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/utils/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/utils/middleware.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc.cjs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -14,15 +29,16 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="JavaScript File" />
++        <option value="JSX File" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 5
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 5
++}</component>
+   <component name="ProjectId" id="2nwgRxIlqloWSZjIh9HsdYEOSfh" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+@@ -30,8 +46,9 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "redux",
++    "git-widget-placeholder": "query-and-context",
+     "last_opened_file_path": "/Users/julius/Documents/Code/Playground/full-stack-open/part7/bloglist",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.standard": "true",
+@@ -67,6 +84,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1729889548030</updated>
+       <workItem from="1729889549085" duration="7587000" />
++      <workItem from="1729906601278" duration="3803000" />
+     </task>
+     <servers />
+   </component>

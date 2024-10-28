@@ -1,0 +1,20 @@
+{
+  "title": "Test blog",
+  "author": "afsdlasdjl",
+  "url": "dasjklfadklsjkjlafs",
+  "comments": [
+    "Hey",
+    "Hey",
+    "Hey"
+  ],
+  "user": {
+    "username": "mluukkai",
+    "name": "Matti Luukkainen",
+    "blogs": [
+      "671e4fa59c8f5f07a97f3394"
+    ],
+    "id": "671e4f79505906c6e3f39f76"
+  },
+  "likes": 0,
+  "id": "671e4fa59c8f5f07a97f3394"
+}

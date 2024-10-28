@@ -1,0 +1,162 @@
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T105259.200.json
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T104312.200.json
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T103920.500.html
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T103905.500.html
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T103545.200.json
+
+###
+
+POST http://localhost:3001/api/blogs/671e4fa59c8f5f07a97f3394/comments
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+Content-Type: application/json
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T103530.200.json
+
+###
+
+POST http://localhost:3001/api/blogs/671e4c3fd0ff68a1ed4beb9e/comments
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+Content-Type: application/json
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T103356.200.json
+
+###
+
+POST http://localhost:3001/api/blogs/671e4c3fd0ff68a1ed4beb9e/comments
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+Content-Type: application/json
+
+{
+  "comment": "Hey"
+}
+
+<> 2024-10-27T103302.200.json
+
+###
+

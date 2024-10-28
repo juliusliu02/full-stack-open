@@ -1,0 +1,44 @@
+{
+  "$__": {
+    "activePaths": {
+      "paths": {
+        "comments": "init",
+        "_id": "init",
+        "title": "init",
+        "author": "init",
+        "url": "init",
+        "user": "init",
+        "likes": "init",
+        "__v": "init"
+      },
+      "states": {
+        "default": {},
+        "init": {
+          "_id": true,
+          "title": true,
+          "author": true,
+          "url": true,
+          "comments": true,
+          "user": true,
+          "likes": true,
+          "__v": true
+        }
+      }
+    },
+    "skipId": true
+  },
+  "$isNew": false,
+  "_doc": {
+    "_id": "671e4c3fd0ff68a1ed4beb9e",
+    "title": "dasfsdfa",
+    "author": "sdfaafs",
+    "url": "sadfadfsfads",
+    "comments": [],
+    "user": "671e4bce73d7d56bb2c0a683",
+    "likes": 0,
+    "__v": 0
+  },
+  "comments": [
+    {}
+  ]
+}

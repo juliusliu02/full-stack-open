@@ -1,56 +1,78 @@
-const blogRouter = require('express').Router()
-const Blog = require('../models/blog')
-const User = require('../models/user')
-const middleware = require('../utils/middleware')
+const blogRouter = require("express").Router();
+const Blog = require("../models/blog");
+const User = require("../models/user");
+const middleware = require("../utils/middleware");
 
-blogRouter.get('/', async (request, response) => {
-    const blogs = await Blog.find({}).populate('user')
-    response.json(blogs).end()
-})
+blogRouter.get("/", async (request, response) => {
+  const blogs = await Blog.find({}).populate("user");
+  response.json(blogs).end();
+});
 
-blogRouter.post('/', middleware.userExtractor, async (request, response) => {
-    const blog = new Blog(request.body)
-    const user = await User.findById(request.user)
-    if (!user) {
-        return response.status(401).json({ error: 'token invalid' })
-    }
-    blog.user = user.id
+blogRouter.post("/", middleware.userExtractor, async (request, response) => {
+  const blog = new Blog(request.body);
 
-    if (!blog.likes) {
-        blog.likes = 0
-    }
+  const user = await User.findById(request.user);
+  if (!user) {
+    return response.status(401).json({ error: "token invalid" });
+  }
+  blog.user = user.id;
 
-    const savedNote = await (await blog.save()).populate('user')
-    response.status(201).json(savedNote).end()
-})
+  if (!blog.likes) {
+    blog.likes = 0;
+  }
 
-blogRouter.delete('/:id', middleware.userExtractor, async (request, response) => {
+  const savedNote = await (await blog.save()).populate("user");
+  user.blogs = user.blogs.concat(savedNote);
+  await user.save();
+
+  response.status(201).json(savedNote).end();
+});
+
+blogRouter.delete(
+  "/:id",
+  middleware.userExtractor,
+  async (request, response) => {
     if (!request.user) {
-        return response.status(401).json({ error: 'token invalid' })
+      return response.status(401).json({ error: "token invalid" });
     }
-    const user = await User.findById(request.user)
-    const blog = await Blog.findById(request.params.id)
+    const user = await User.findById(request.user);
+    const blog = await Blog.findById(request.params.id);
 
     if (!blog) {
-        return response.status(204).end()
+      return response.status(204).end();
     }
 
-    const blogOwner = await User.findById(blog.user)
-    if ( user.toString() !== blogOwner.toString() ) {
-        return response.status(401).json({ error: 'unauthorized' })
+    const blogOwner = await User.findById(blog.user);
+    if (user.toString() !== blogOwner.toString()) {
+      return response.status(401).json({ error: "unauthorized" });
     }
-    await Blog.findByIdAndDelete(request.params.id)        
-    response.status(204).end()                             
-})
+    await Blog.findByIdAndDelete(request.params.id);
 
-blogRouter.put('/:id', async (request, response) => {
+    user.blogs = user.blogs.filter((blog) => blog.id !== request.params.id);
+    response.status(204).end();
+  },
+);
 
-    const newBlog = await Blog.findByIdAndUpdate(
-        request.params.id,
-        { ...request.body },
-        { new: true }).populate('user')
+blogRouter.put("/:id", async (request, response) => {
+  const newBlog = await Blog.findByIdAndUpdate(
+    request.params.id,
+    { ...request.body },
+    { new: true },
+  ).populate("user");
 
-    response.json(newBlog).end()
-})
+  response.json(newBlog).end();
+});
 
-module.exports = blogRouter
+blogRouter.post("/:id/comments", async (request, response) => {
+  const blog = await Blog.findByIdAndUpdate(
+    request.params.id,
+    {
+      $push: { comments: request.body.comment },
+    },
+    { new: true },
+  ).populate("user");
+
+  response.json(blog).end();
+});
+
+module.exports = blogRouter;

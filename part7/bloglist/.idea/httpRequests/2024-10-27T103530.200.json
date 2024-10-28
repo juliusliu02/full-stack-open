@@ -1,0 +1,44 @@
+{
+  "$__": {
+    "activePaths": {
+      "paths": {
+        "comments": "init",
+        "_id": "init",
+        "title": "init",
+        "author": "init",
+        "url": "init",
+        "user": "init",
+        "likes": "init",
+        "__v": "init"
+      },
+      "states": {
+        "default": {},
+        "init": {
+          "_id": true,
+          "title": true,
+          "author": true,
+          "url": true,
+          "comments": true,
+          "user": true,
+          "likes": true,
+          "__v": true
+        }
+      }
+    },
+    "skipId": true
+  },
+  "$isNew": false,
+  "_doc": {
+    "_id": "671e4fa59c8f5f07a97f3394",
+    "title": "Test blog",
+    "author": "afsdlasdjl",
+    "url": "dasjklfadklsjkjlafs",
+    "comments": [],
+    "user": "671e4f79505906c6e3f39f76",
+    "likes": 0,
+    "__v": 0
+  },
+  "comments": [
+    {}
+  ]
+}

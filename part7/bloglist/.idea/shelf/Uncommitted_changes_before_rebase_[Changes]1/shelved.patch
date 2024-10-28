@@ -1,0 +1,236 @@
+Index: ../../part4/bloglist/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"bloglist\",\n  \"version\": \"0.0.1\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"start\": \"cross-env NODE_ENV=production node index.js\",\n    \"dev\": \"cross-env NODE_ENV=development nodemon index.js\",\n    \"test\": \"cross-env  NODE_ENV=test node --test\"\n  },\n  \"author\": \"Julius Liu\",\n  \"license\": \"ISC\",\n  \"description\": \"\",\n  \"dependencies\": {\n    \"bcrypt\": \"^5.1.1\",\n    \"cors\": \"^2.8.5\",\n    \"cross-env\": \"^7.0.3\",\n    \"dotenv\": \"^16.4.5\",\n    \"express\": \"^4.21.0\",\n    \"express-async-errors\": \"^3.1.1\",\n    \"jsonwebtoken\": \"^9.0.2\",\n    \"lodash\": \"^4.17.21\",\n    \"mongoose\": \"^8.7.0\",\n    \"nodemon\": \"^3.1.7\"\n  },\n  \"devDependencies\": {\n    \"supertest\": \"^7.0.0\"\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/package.json b/../../part4/bloglist/package.json
+--- a/../../part4/bloglist/package.json	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/package.json	(date 1729954017428)
+@@ -3,9 +3,15 @@
+   "version": "0.0.1",
+   "main": "index.js",
+   "scripts": {
+-    "start": "cross-env NODE_ENV=production node index.js",
+-    "dev": "cross-env NODE_ENV=development nodemon index.js",
+-    "test": "cross-env  NODE_ENV=test node --test"
++    "start": "NODE_ENV=production node index.js",
++    "dev": "NODE_ENV=development nodemon index.js",
++    "build:ui": "rm -rf build && cd ../../part5/bloglist-frontend/ && npm run build && cp -r build ../../part4/bloglist",
++    "deploy": "fly deploy",
++    "deploy:full": "npm run build:ui && npm run deploy",
++    "logs:prod": "fly logs",
++    "lint": "eslint .",
++    "test": "NODE_ENV=test node --test",
++    "start:test": "NODE_ENV=test node index.js"
+   },
+   "author": "Julius Liu",
+   "license": "ISC",
+Index: ../../part4/bloglist/app.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const config = require('./utils/config')\nconst express = require('express')\nrequire('express-async-errors')\nconst app = express()\nconst cors = require('cors')\nconst blogRouter = require('./controllers/blog')\nconst userRouter = require('./controllers/user')\nconst loginRouter = require('./controllers/login')\nconst middleware = require('./utils/middleware')\nconst logger = require('./utils/logger')\nconst mongoose = require('mongoose')\nmongoose.connect(config.MONGODB_URI)\n\nmongoose.set('strictQuery', false)\n\nlogger.info('connecting to', config.MONGODB_URI)\n\nmongoose.connect(config.MONGODB_URI)\n    .then(() => {\n        logger.info('connected to MongoDB')\n    })\n    .catch((error) => {\n        logger.error('error connecting to MongoDB:', error.message)\n    })\n\napp.use(cors())\napp.use(express.json())\napp.use(middleware.requestLogger)\napp.use(middleware.tokenExtractor)\napp.use('/api/login', loginRouter)\napp.use('/api/blogs', blogRouter)\napp.use('/api/users', userRouter)\n\napp.use(middleware.unknownEndpoint)\napp.use(middleware.errorHandler)\n\nmodule.exports = app
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/app.js b/../../part4/bloglist/app.js
+--- a/../../part4/bloglist/app.js	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/app.js	(date 1729954017431)
+@@ -31,6 +31,11 @@
+ app.use('/api/blogs', blogRouter)
+ app.use('/api/users', userRouter)
+ 
++if (process.env.NODE_ENV === 'test') {
++    const testingRouter = require('./controllers/testing')
++    app.use('/api/testing', testingRouter)
++}
++
+ app.use(middleware.unknownEndpoint)
+ app.use(middleware.errorHandler)
+ 
+Index: ../../part4/bloglist/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectModuleManager\">\n    <modules>\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/bloglist.iml\" filepath=\"$PROJECT_DIR$/.idea/bloglist.iml\" />\n    </modules>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/.idea/modules.xml b/../../part4/bloglist/.idea/modules.xml
+--- a/../../part4/bloglist/.idea/modules.xml	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/.idea/modules.xml	(date 1729954017436)
+@@ -3,6 +3,8 @@
+   <component name="ProjectModuleManager">
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/.idea/bloglist.iml" filepath="$PROJECT_DIR$/.idea/bloglist.iml" />
++      <module fileurl="file://$PROJECT_DIR$/../../part5/bloglist-e2e/.idea/bloglist-e2e.iml" filepath="$PROJECT_DIR$/../../part5/bloglist-e2e/.idea/bloglist-e2e.iml" />
++      <module fileurl="file://$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/bloglist-frontend.iml" filepath="$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/bloglist-frontend.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: ../../part4/bloglist/tests/user.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const { test, after, beforeEach, describe } = require('node:test')\nconst assert = require('node:assert')\nconst mongoose = require('mongoose')\nconst supertest = require('supertest')\nconst bcrypt = require('bcrypt')\nconst User = require('../models/user')\nconst helper = require('./test_helper')\n\nconst app = require('../app')\nconst {testBlog} = require(\"./test_helper\");\nconst api = supertest(app)\n\ndescribe('when there is initially one user in db', () => {\n    beforeEach(async () => {\n        await User.deleteMany({})\n\n        const passwordHash = await bcrypt.hash('sekret', 10)\n        const user = new User({ username: 'root', passwordHash })\n\n        await user.save()\n    })\n\n    test('creation succeeds with a fresh username', async () => {\n        const usersAtStart = await helper.getUsers()\n\n        await api\n            .post('/api/users')\n            .send(helper.testUser)\n            .expect(201)\n            .expect('Content-Type', /application\\/json/)\n\n        const usersAtEnd = await helper.getUsers()\n        assert.strictEqual(usersAtEnd.length, usersAtStart.length + 1)\n\n        const usernames = usersAtEnd.map(u => u.username)\n        assert(usernames.includes(newUser.username))\n    })\n})\n\ndescribe('input validation', () => {\n    beforeEach(async () => {\n        await User.deleteMany({})\n    })\n\n    test('creation fails when username is shorter than 3 characters', async () => {\n        const newUser = { ...helper.testUser, username: 'ml' }\n\n        await api\n            .post('/api/users')\n            .send(newUser)\n            .expect(400)\n    })\n\n    test('creation fails with a duplicated username', async () => {\n        await api\n            .post('/api/users')\n            .send(helper.testUser)\n            .expect(201)\n            .expect('Content-Type', /application\\/json/)\n\n        const result = await api\n            .post('/api/users')\n            .send(helper.testUser)\n            .expect(400)\n\n        assert(result.body.error.includes('expected `username` to be unique'))\n    })\n})\n\ndescribe('test blog creation with link to user', () => {\n    let token\n\n    beforeEach(async () => {\n        await User.deleteMany({})\n        await api\n            .post('/api/users')\n            .send(helper.testUser)\n            .expect(201)\n\n        const auth = await api\n            .post('/api/login')\n            .send(helper.testUser)\n            .expect(200)\n\n        token = auth.body.token\n    })\n\n    test('created blogs include user id', async () => {\n        const result = await api\n            .post('/api/blogs')\n            .set('Authorization', `Bearer ${token}`)\n            .send(testBlog)\n            .expect(201)\n        assert(Object.hasOwn(result.body, 'user'))\n\n        await api\n            .get('/api/blogs')\n            .expect(200)\n    })\n\n    test('4.23 unauthorized creation is blocked', async () => {\n        await api\n            .post('/api/blogs')\n            .send(testBlog)\n            .expect(401)\n    })\n})\n\nafter(async () => {\n    await mongoose.connection.close()\n})
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/tests/user.test.js b/../../part4/bloglist/tests/user.test.js
+--- a/../../part4/bloglist/tests/user.test.js	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/tests/user.test.js	(date 1729954017440)
+@@ -15,7 +15,7 @@
+         await User.deleteMany({})
+ 
+         const passwordHash = await bcrypt.hash('sekret', 10)
+-        const user = new User({ username: 'root', passwordHash })
++        const user = new User({ username: 'root', name: 'Root', passwordHash })
+ 
+         await user.save()
+     })
+@@ -23,7 +23,7 @@
+     test('creation succeeds with a fresh username', async () => {
+         const usersAtStart = await helper.getUsers()
+ 
+-        await api
++        const newUser = await api
+             .post('/api/users')
+             .send(helper.testUser)
+             .expect(201)
+@@ -33,13 +33,18 @@
+         assert.strictEqual(usersAtEnd.length, usersAtStart.length + 1)
+ 
+         const usernames = usersAtEnd.map(u => u.username)
+-        assert(usernames.includes(newUser.username))
++        assert(usernames.includes(newUser.body.username))
+     })
+ })
+ 
+ describe('input validation', () => {
+     beforeEach(async () => {
+         await User.deleteMany({})
++
++        const passwordHash = await bcrypt.hash('sekret', 10)
++        const user = new User({ username: 'root', passwordHash })
++
++        await user.save()
+     })
+ 
+     test('creation fails when username is shorter than 3 characters', async () => {
+@@ -68,14 +73,14 @@
+ })
+ 
+ describe('test blog creation with link to user', () => {
+-    let token
++    let token = null
+ 
+     beforeEach(async () => {
+-        await User.deleteMany({})
+-        await api
+-            .post('/api/users')
+-            .send(helper.testUser)
+-            .expect(201)
++        // await User.deleteMany({})
++        // await api
++        //     .post('/api/users')
++        //     .send(helper.testUser)
++        //     .expect(201)
+ 
+         const auth = await api
+             .post('/api/login')
+Index: ../../part4/bloglist/controllers/blog.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const blogRouter = require('express').Router()\nconst Blog = require('../models/blog')\nconst User = require('../models/user')\nconst middleware = require('../utils/middleware')\n\nblogRouter.get('/', async (request, response) => {\n    const blogs = await Blog.find({}).populate('user')\n    response.json(blogs).end()\n})\n\nblogRouter.post('/', middleware.userExtractor, async (request, response) => {\n    const blog = new Blog(request.body)\n    console.log(request.user)\n    const user = await User.findById(request.user)\n    if (!user) {\n        return response.status(401).json({ error: 'token invalid' })\n    }\n    blog.user = user.id\n\n    if (!blog.likes) {\n        blog.likes = 0\n    }\n\n    const savedNote = await blog.save()\n    response.status(201).json(savedNote).end()\n})\n\nblogRouter.delete('/:id', middleware.userExtractor, async (request, response) => {\n    if (!request.user) {\n        return response.status(401).json({ error: 'token invalid' })\n    }\n    const user = await User.findById(request.user)\n    const blog = await Blog.findById(request.params.id)\n\n    if (!blog) {\n        return response.status(204).end()\n    }\n\n    const blogOwner = await User.findById(blog.user)\n    if ( user.toString() !== blogOwner.toString() ) {\n        return response.status(401).json({ error: 'unauthorized' })\n    }\n    await Blog.findByIdAndDelete(request.params.id)        \n    response.status(204).end()                             \n})\n\nblogRouter.put('/:id', async (request, response) => {\n    const newBlog = await Blog.findByIdAndUpdate(\n        request.params.id,\n        { ...request.body },\n        { new: true })\n    response.json(newBlog).end()\n})\n\nmodule.exports = blogRouter
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/controllers/blog.js b/../../part4/bloglist/controllers/blog.js
+--- a/../../part4/bloglist/controllers/blog.js	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/controllers/blog.js	(date 1729954017444)
+@@ -10,7 +10,6 @@
+ 
+ blogRouter.post('/', middleware.userExtractor, async (request, response) => {
+     const blog = new Blog(request.body)
+-    console.log(request.user)
+     const user = await User.findById(request.user)
+     if (!user) {
+         return response.status(401).json({ error: 'token invalid' })
+@@ -21,7 +20,7 @@
+         blog.likes = 0
+     }
+ 
+-    const savedNote = await blog.save()
++    const savedNote = await (await blog.save()).populate('user')
+     response.status(201).json(savedNote).end()
+ })
+ 
+@@ -45,10 +44,12 @@
+ })
+ 
+ blogRouter.put('/:id', async (request, response) => {
++
+     const newBlog = await Blog.findByIdAndUpdate(
+         request.params.id,
+         { ...request.body },
+-        { new: true })
++        { new: true }).populate('user')
++
+     response.json(newBlog).end()
+ })
+ 
+Index: ../../part4/bloglist/.idea/bloglist.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"WEB_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <excludeFolder url=\"file://$MODULE_DIR$/.tmp\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/temp\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/tmp\" />\n    </content>\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/.idea/bloglist.iml b/../../part4/bloglist/.idea/bloglist.iml
+--- a/../../part4/bloglist/.idea/bloglist.iml	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/.idea/bloglist.iml	(date 1729954017447)
+@@ -8,5 +8,7 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module" module-name="bloglist-frontend" />
++    <orderEntry type="module" module-name="bloglist-e2e" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: ../../part3/phonebook-backend/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"\" vcs=\"Git\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part3/phonebook-backend/.idea/vcs.xml b/../../part3/phonebook-backend/.idea/vcs.xml
+--- a/../../part3/phonebook-backend/.idea/vcs.xml	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part3/phonebook-backend/.idea/vcs.xml	(date 1729954017450)
+@@ -2,5 +2,6 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: ../../part4/bloglist/utils/middleware.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const logger = require('./logger')\nconst jwt = require(\"jsonwebtoken\");\n\nconst requestLogger = (request, response, next) => {\n    logger.info('Method:', request.method)\n    logger.info('Path:  ', request.path)\n    logger.info('Body:  ', request.body)\n    logger.info('---')\n    next()\n}\n\nconst unknownEndpoint = (request, response) => {\n    response.status(404).send({ error: 'unknown endpoint' })\n}\n\nconst errorHandler = (error, request, response, next) => {\n    logger.error(error.message)\n\n    if (error.name === 'CastError') {\n        return response.status(400).send({ error: 'malformatted id' })\n    } else if (error.name === 'ValidationError') {\n        return response.status(400).json({ error: error.message })\n    } else if (error.name === 'MongoServerError' && error.message.includes('E11000 duplicate key error')) {\n        return response.status(400).json({ error: 'expected `username` to be unique' })\n    } else if (error.name === 'JsonWebTokenError') {\n        return response.status(401).json({\n            error: 'invalid token'\n        })\n    } else if (error.name === 'TokenExpiredError') {\n        return response.status(401).json({\n            error: 'token expired'\n        })\n    }\n\n    next(error)\n}\n\nconst tokenExtractor = (request, response, next) => {\n    const authorization = request.get('authorization')\n    if (authorization && authorization.startsWith('Bearer ')) {\n        request.token = authorization.replace('Bearer ', '')\n    }\n    next()\n}\n\nconst userExtractor = (request, response, next) => {\n    const decodedToken = jwt.verify(request.token, process.env.SECRET)\n    console.log(decodedToken)\n    if (decodedToken.id) {\n        request.user = decodedToken.id\n    }\n    next()\n}\n\nmodule.exports = {\n    requestLogger,\n    unknownEndpoint,\n    errorHandler,\n    tokenExtractor,\n    userExtractor\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../part4/bloglist/utils/middleware.js b/../../part4/bloglist/utils/middleware.js
+--- a/../../part4/bloglist/utils/middleware.js	(revision ea0afba7ca0abc2f3f54cc3c87414b48003b79c7)
++++ b/../../part4/bloglist/utils/middleware.js	(date 1729954017452)
+@@ -45,7 +45,6 @@
+ 
+ const userExtractor = (request, response, next) => {
+     const decodedToken = jwt.verify(request.token, process.env.SECRET)
+-    console.log(decodedToken)
+     if (decodedToken.id) {
+         request.user = decodedToken.id
+     }
