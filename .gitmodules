@@ -1,0 +1,6 @@
+[submodule "part9/patientor/fso-patientor"]
+	path = part9/patientor/fso-patientor
+	url = git@github.com:juliusliu02/fso-patientor.git
+[submodule "part9/diary/flight-diary"]
+	path = part9/diary/flight-diary
+	url = https://github.com/fullstack-hy2020/flight-diary.git

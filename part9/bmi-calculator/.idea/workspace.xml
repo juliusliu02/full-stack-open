@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd81081e-e0fd-4c94-a755-178d956a335b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../part3/phonebook-backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part3/phonebook-backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/.idea/bloglist.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/.idea/bloglist.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/controllers/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/controllers/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/tests/user.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/tests/user.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist/utils/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist/utils/middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/extensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/merge-resolvers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/arguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/directives.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/enum-values.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/fields.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/input-type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/merge-named-type-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/merge-nodes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/merge-typedefs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/scalar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/schema-def.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/union.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/cjs/typedefs-mergers/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/extensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/merge-resolvers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/arguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/directives.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/enum-values.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/fields.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/input-type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-named-type-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-nodes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-typedefs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/scalar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/schema-def.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/union.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/esm/typedefs-mergers/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/extensions.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/extensions.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/index.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/merge-resolvers.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/merge-resolvers.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/arguments.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/arguments.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/directives.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/directives.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/enum-values.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/enum-values.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/enum.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/fields.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/fields.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/index.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/input-type.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/input-type.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/interface.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/merge-named-type-array.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/merge-named-type-array.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/merge-nodes.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/merge-nodes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/merge-typedefs.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/merge-typedefs.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/scalar.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/scalar.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/schema-def.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/schema-def.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/type.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/type.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/union.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/union.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/utils.d.cts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part8/library-backend/node_modules/@graphql-tools/merge/typings/typedefs-mergers/utils.d.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2oO7Hbyoo21w6VYnyX2RiHATH7g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/julius/Documents/Code/Playground/full-stack-open/part9/bmi-calculator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "/Users/julius/Documents/Code/Playground/full-stack-open/part9/ts-exercises/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd81081e-e0fd-4c94-a755-178d956a335b" name="Changes" comment="" />
+      <created>1730728681668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730728681668</updated>
+      <workItem from="1730728682720" duration="8525000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
